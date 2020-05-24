@@ -60,6 +60,7 @@ pipeline {
                     sh "hostname"
                     sh "id"
                     sh "pwd"
+                    sh "kubectl get nodes"
                     sh "ansible-playbook  playbook.yml --extra-vars \"image_id=${image_id}\""
                 }
             }
