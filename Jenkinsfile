@@ -57,6 +57,9 @@ pipeline {
             steps {
                 script{
                     def image_id = registry + ":$BUILD_NUMBER"
+                    sh "hostname"
+                    sh "id"
+                    sh "pwd"
                     sh "ansible-playbook  playbook.yml --extra-vars \"image_id=${image_id}\""
                 }
             }
