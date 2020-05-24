@@ -61,6 +61,7 @@ pipeline {
                     sh "id"
                     sh "pwd"
                     sh "kubectl get nodes"
+                    sh "PATH = "/usr/local/bin/ansible:/usr/local/bin/ansible-playbook:$PATH""
                     sh "ansible-playbook  playbook.yml --extra-vars \"image_id=${image_id}\""
                 }
             }
